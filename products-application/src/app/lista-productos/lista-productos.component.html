@@ -1,0 +1,28 @@
+<div class="container">
+    <div class=" justify-content-md-center">
+      <button class="btn btn-primary" (click)="addProduct()">
+        Agregar
+    </button>
+    </div>
+    <div class=" justify-content-md-center">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Precio</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let producto of productos">
+            <th scope="row">{{producto.idProducto}}</th>
+            <td>{{producto.nombre}}</td>
+            <td>{{producto.precio}}</td>
+            <td><a [routerLink]="['/detalle', producto.idProducto]">Ver detalle</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+

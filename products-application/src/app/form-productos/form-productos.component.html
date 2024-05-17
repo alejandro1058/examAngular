@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Nuevo Producto</h1>
+    <form #f="ngForm" (ngSubmit)="f.form.valid && onSaveProduct()">
+        <div class="row">
+        <div class="col">
+            <label  class="form-label">Nombre del Producto*</label>
+            <input class="form-control form-control-lg" type="text" [(ngModel)]="nombre" name="nombre" required/>
+        </div>
+        
+        </div>
+        <div class="row">
+            <div class="col">
+            <label  class="form-label">Precio*</label>
+            <input class="form-control form-control-lg" type="text" [(ngModel)]="precio" name="precio" required/>
+            </div>
+        </div>
+        <button class="btn btn-primary">
+            enviar
+        </button>
+    </form>
+</div>
